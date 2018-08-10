@@ -9,6 +9,7 @@ require_once 'config.php';
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="theme/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 

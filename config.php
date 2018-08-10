@@ -12,6 +12,21 @@ $servers = array(
 	)
 );
 
+$remoteSync = array(
+	//-- this is where the plex data is stored
+	'from' => array(
+		"host" => "192.168.2.80",
+		"port" => 22,
+		"fingerprint" => "fingerprint",
+		"username" => "",
+		"password" => "",
+		"keyfile" => "",
+		"path" => ""
+	),
+	//-- this is where the data will be pushed to
+	'to' => array()
+);
+
 
 $plex = new Plex();
 
