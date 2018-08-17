@@ -8,6 +8,8 @@ if (empty($_GET['key']) || empty($_GET['sectionkey'])) {
 }
 
 
+exit;
+
 $section = $server->getLibrary()->getSection($_GET['sectionkey']);
 $sectionType = $section->getType();
 

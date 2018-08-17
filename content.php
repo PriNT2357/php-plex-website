@@ -4,10 +4,13 @@ if (empty($_GET['section'])) {
 	echo "Make a selection on the left";
 }
 else {
-	$library = $server->getLibrary();
-	$section = $library->getSection($_GET['section']);
-	$sectionType = $section->getType();
+	//$library = $server->getLibrary();
+	//$section = $library->getSection($_GET['section']);
+	//$sectionType = $section->getType();
 	
+	$sectionInfo = $client->getLibrarySectionContents($_GET['section']);
+	$sectionType = $sectionInfo['viewGroup'];
+	//print_r($sectionInfo);
 	?>
 	
 	<div class="row">

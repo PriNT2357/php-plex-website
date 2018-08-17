@@ -4,6 +4,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
 
 require_once 'Plex/Plex.php';
+require_once 'vendor/autoload.php';
+
 
 $servers = array(
 	'dockerserver' => array(
@@ -11,6 +13,10 @@ $servers = array(
 		"token" => "<PLEX AUTH TOKEN>"
 	)
 );
+
+$client = new \jc21\PlexApi($servers['dockerserver']['address']);
+$client->setToken($servers['dockerserver']['token']);
+
 
 $remoteSync = array(
 	//-- this is where the plex data is stored
